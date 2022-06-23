@@ -1,0 +1,28 @@
+<% if(productos.length) { %>
+    <table>
+        <thead>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Foto</th>
+        </thead>
+        <tbody>
+            <% productos.forEach(producto => { %> 
+                <tr>
+                    <td>
+                        <%= producto.title %>
+                    </td>
+                    <td>
+                        <%= producto.price %>
+                    </td>
+                    <td>
+                        <img style="width: 100px;" src=<%= producto.thumbnail %>> 
+                    </td>
+                </tr> 
+            <% }) %> 
+        </tbody>
+    </table>
+<% } else { %>
+    <p style="color: red;">No hay productos cargados </p>   
+<% } %> 
+
+<a href="/">Volver</a>

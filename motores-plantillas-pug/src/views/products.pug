@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Mi app
+    body
+        if productos.length > 0
+            table
+                tr
+                    th Nombre
+                    th Precio
+                    th Foto 
+                each val in productos
+                    tr
+                        td #{val.title}
+                        td #{val.price}
+                        td
+                            img(style="width: 100px;", src=val.thumbnail)
+        else
+            <p style="color: red;">No hay productos cargados </p>   
+        <a href="/">Volver</a>
+
